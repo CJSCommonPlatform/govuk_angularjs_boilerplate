@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var rucksack = require('rucksack-css');
 var helpers = require('./helpers');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
@@ -26,6 +27,11 @@ module.exports = {
       {test: /\.(woff|woff2|eot|ttf|svg)$/, loader: 'url?limit=1024&name=fonts/[name].[ext]'}
     ]
   },
+  postcss: [
+    rucksack({
+      autoprefixer: true
+    })
+  ],
   plugins: [
     new webpack.DefinePlugin({
       process: {
