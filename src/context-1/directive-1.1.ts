@@ -10,8 +10,10 @@ export class DirectiveOneOne {
   ngModel: ng.INgModelController;
 
   $onInit() {
-    this.ngModel.$validators['custom'] = (val: number): boolean => {
-      return val % 2 === 0;
-    };
+    angular.extend(this.ngModel.$validators, {
+      custom: (val: number): boolean => {
+        return val % 2 === 0;
+      }
+    });
   }
 }

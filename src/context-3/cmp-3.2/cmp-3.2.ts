@@ -17,7 +17,8 @@ export class ComponentThreeTwo {
 
   constructor(private _service: ServiceThreeOne) {}
 
-  // $onInit automatically invoked by angular when component bindings are available to the controller
+  // $onInit automatically invoked by angular when component bindings are
+  // available to the controller
   $onInit() {
     this.loading = true;
     this._service.doSomething()

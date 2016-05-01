@@ -19,7 +19,7 @@ export class ServiceA {
   findOne(id: number): ng.IPromise<IModel> {
     return this._$http({
       method: 'GET',
-      url:    `/models/${id}`,
+      url:    `/models/${id}`
     })
       .then(res => res.data)
       .catch(res => this._$q.reject(res.data));
