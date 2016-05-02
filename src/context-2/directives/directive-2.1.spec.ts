@@ -1,16 +1,16 @@
-import {contextOne} from './index';
+import {contextTwo} from '../index';
 
-describe('directive 1.1', () => {
+describe('directive 2.1', () => {
 
   let scope: any;
   let element: any;
 
-  beforeEach(angular.mock.module(contextOne));
+  beforeEach(angular.mock.module(contextTwo));
 
   beforeEach(inject(($compile: ng.ICompileService, $rootScope: ng.IRootScopeService) => {
     scope = $rootScope.$new();
     scope.model = 1;
-    element = $compile('<input type="text" ng-model="model" directive-one-one>')(scope);
+    element = $compile('<input type="text" ng-model="model" directive-two-one>')(scope);
     scope.$digest();
   }));
 

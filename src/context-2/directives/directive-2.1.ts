@@ -5,7 +5,7 @@ import {Directive} from '@scarlz/cpp';
     ngModel: 'ngModel'
   }
 })
-export class DirectiveOneOne {
+export class DirectiveTwoOne {
 
   ngModel: ng.INgModelController;
 
