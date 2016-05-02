@@ -9,7 +9,8 @@
     "declaration": true
   },
   "files": [
-    "typings/main.d.ts"
+    "typings/main.d.ts",
+    "src/custom-typings.d.ts"
   ],
   "exclude": [
     "typings/browser.d.ts",
