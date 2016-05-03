@@ -42,7 +42,8 @@ In the boilerplate app, the `common` and `config` modules are core modules, depe
 ###Module Structure
 
 Modules should be structured to inherit the same basic structure, where files are grouped by type but
-where route components can exist at the top level.
+where route components can exist at the top level. The philosophy is that folders retain as flat a
+structure as is readable.
 
 A typical core module will contain:
 
@@ -55,18 +56,15 @@ A typical core module will contain:
   index.ts
 ```
 
-A typical context module will contain:
+A typical context module will extend this structure with:
 
 ```
-  /components
-  /constants
-  /directives
-  /filters
   /route-component-1
   /route-component-2
-  /services
-  index.ts
+  /route-component-3
+  ...
   routes.ts
 ```
-The routes for a context are defined within the context itself, and are then imported by the application's
- main routes configuration.
+Any components, services, constants, directives and filters defined within a context are local to that context,
+ and should not be required by another context (as per the design remit above). The context's routes, too, are
+ defined within the context itself, and are then imported by the application's main routes configuration.
