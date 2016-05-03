@@ -1,7 +1,7 @@
-import {ComponentOneOne} from './cmp-1.1';
+import {PageComponentOneOne} from './page-cmp-1.1';
 
 const module = angular.module('ngGovExample.context-1', [])
-  
-  .component('componentOneOne', ComponentOneOne);
+
+  .component('pageComponentOneOne', PageComponentOneOne);
 
 export const contextOne: string = module.name;

@@ -51,7 +51,10 @@ describe('service a', () => {
     });
 
     it('creates a model using the passed arguments', () => {
-      $httpBackend.expectPOST('/models', {value1: 'value1', value2: 'value2'}).respond(400, {message: 'error!'});
+      $httpBackend.expectPOST('/models', {
+        value1: 'value1',
+        value2: 'value2'
+      }).respond(400, {message: 'error!'});
       ServiceA.create('value1', 'value2').catch(setPromiseValue);
       $httpBackend.flush();
       expect(promiseValue).toEqual({message: 'error!'});

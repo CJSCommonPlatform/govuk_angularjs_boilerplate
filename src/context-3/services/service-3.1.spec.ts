@@ -1,7 +1,7 @@
 import {contextThree} from '../index';
 import {ServiceThreeOne} from './service-3.1';
 
-fdescribe('service 3.1', () => {
+describe('service 3.1', () => {
 
   let service: ServiceThreeOne;
   let timeout: ng.ITimeoutService;

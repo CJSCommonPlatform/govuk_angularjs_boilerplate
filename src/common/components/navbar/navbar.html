@@ -8,9 +8,7 @@
         <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
         <li ui-sref-active="active"><a ui-sref="context1">Context One</a></li>
         <li ui-sref-active="active"><a ui-sref="context2">Context Two</a></li>
-        <li ui-sref-active="active"><a ui-sref="context3.one">Context Three</a></li>
-        <li ui-sref-active="active"><a ui-sref="context4">Context Four</a></li>
-        <li ui-sref-active="active"><a ui-sref="context5a">Context Five-A</a></li>
+        <li ng-class="{active: $ctrl.includes('context3')}"><a ui-sref="context3.one">Context Three</a></li>
       </ul>
     </nav>
   </div>

@@ -1,17 +1,19 @@
 import {Component} from '@scarlz/cpp';
 
-require('./cmp-2.1.scss');
-
 @Component({
+  bindings: {
+    items:    '<',
+    onSelect: '&'
+  },
   template: require('./cmp-2.1.html')
 })
 
 export class ComponentTwoOne {
 
-  items: string[] = ['Alpha', 'Beta', 'Gamma'];
-  selectedItem: string;
+  items: string[] = [];
+  onSelect: Function;
 
-  setSelectedItem(value: string) {
-    this.selectedItem = value;
+  select(value: string) {
+    this.onSelect({$event: value});
   }
 }

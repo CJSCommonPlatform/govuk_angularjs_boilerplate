@@ -4,19 +4,26 @@ describe('component 2.1', () => {
 
   let $scope: any;
   let element: JQuery;
+  let callbackValue: any;
 
   beforeEach(angular.mock.module(contextTwo));
 
   beforeEach(inject(($compile: ng.ICompileService, $rootScope: ng.IRootScopeService) => {
     $scope = $rootScope.$new();
-    element = $compile('<component-two-one></component-two-one>')($scope);
+    $scope.items = ['one', 'two', 'three'];
+    $scope.callback = val => callbackValue = val;
+    element = $compile(`<component-two-one items="items" on-select="callback($event)">
+                        </component-two-one>`)($scope);
     $scope.$digest();
+    callbackValue = null;
   }));
 
-  it('sets a selected item when clicked', () => {
-    const selected = element.find('.selected-item');
-    expect(selected).toBeEmpty();
-    element.find('*:contains("Alpha")').click();
-    expect(selected).toContainText('Alpha');
+  it('displays a list of the passed items', () => {
+    expect(element.find('.list-item').length).toEqual(3);
+  });
+
+  it('invokes an `onSelect` callback when an item is clicked', () => {
+    element.find('*:contains("one")').click();
+    expect(callbackValue).toEqual('one');
   });
 });
