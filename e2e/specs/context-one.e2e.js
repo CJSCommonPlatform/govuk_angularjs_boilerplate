@@ -5,7 +5,7 @@ describe('context one page', function() {
     browser.get('/context-one');
   });
 
-  it('is a test', function() {
+  it('has the correct heading', function() {
     expect(element(by.tagName('h1')).getText()).toEqual('Component A');
   });
 });

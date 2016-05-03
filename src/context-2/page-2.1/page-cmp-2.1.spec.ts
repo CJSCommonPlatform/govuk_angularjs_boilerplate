@@ -15,7 +15,7 @@ describe('page component 2.1', () => {
 
   it('sets a selected item when clicked', () => {
     const selected = element.find('.selected-item');
-    expect(selected).toBeEmpty();
+    expect(selected).toContainText('n/a');
     element.find('*:contains("Alpha")').click();
     expect(selected).toContainText('Alpha');
   });

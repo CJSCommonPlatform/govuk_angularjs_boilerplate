@@ -3,5 +3,5 @@
 <h5>Common component:</h5>
 <component-two-one items="$ctrl.items" on-select="$ctrl.setSelectedItem($event)"></component-two-one>
 <p>
-  Selected Item: <span  class="selected-item" ng-bind="$ctrl.selectedItem"></span>
+  Selected Item: <span  class="selected-item" ng-bind="$ctrl.selectedItem || 'n/a'"></span>
 </p>

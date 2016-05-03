@@ -1,5 +1,7 @@
 import {Component} from '@scarlz/cpp';
 
+require('./cmp-2.1.scss');
+
 @Component({
   bindings: {
     items:    '<',
