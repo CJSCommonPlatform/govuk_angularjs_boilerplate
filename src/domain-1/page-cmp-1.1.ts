@@ -1,4 +1,4 @@
-import {Component} from '@scarlz/cpp';
+import {Component} from '@govuk/angularjs-framework';
 
 require('./page-cmp-1.1.scss');
 

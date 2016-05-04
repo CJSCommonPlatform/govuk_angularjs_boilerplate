@@ -1,4 +1,4 @@
-import {Directive} from '@scarlz/cpp';
+import {Directive} from '@govuk/angularjs-framework';
 
 @Directive({
   require: {

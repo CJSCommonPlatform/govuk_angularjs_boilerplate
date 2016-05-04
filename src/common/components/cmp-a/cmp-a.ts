@@ -1,4 +1,4 @@
-import {Component} from '@scarlz/cpp';
+import {Component} from '@govuk/angularjs-framework';
 import {IModel} from '../../interfaces';
 
 require('./cmp-a.scss');

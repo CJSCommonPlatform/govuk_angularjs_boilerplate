@@ -1,4 +1,4 @@
-import {Component} from '@scarlz/cpp';
+import {Component} from '@govuk/angularjs-framework';
 import {ServiceThreeOne} from '../services/service-3.1';
 
 require('./page-cmp-3.1.scss');
