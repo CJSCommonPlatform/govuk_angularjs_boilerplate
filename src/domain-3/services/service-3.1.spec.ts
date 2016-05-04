@@ -1,4 +1,4 @@
-import {contextThree} from '../index';
+import {domainThree} from '../index';
 import {ServiceThreeOne} from './service-3.1';
 
 describe('service 3.1', () => {
@@ -7,7 +7,7 @@ describe('service 3.1', () => {
   let timeout: ng.ITimeoutService;
   let promiseValue: any;
 
-  beforeEach(angular.mock.module(contextThree));
+  beforeEach(angular.mock.module(domainThree));
 
   beforeEach(inject((ServiceThreeOne: ServiceThreeOne, $timeout: ng.ITimeoutService) => {
     service = ServiceThreeOne;

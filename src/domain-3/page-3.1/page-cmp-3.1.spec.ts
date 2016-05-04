@@ -1,4 +1,4 @@
-import {contextThree} from '../index';
+import {domainThree} from '../index';
 import {ServiceThreeOne} from '../services/service-3.1';
 
 describe('page component 3.1', () => {
@@ -8,7 +8,7 @@ describe('page component 3.1', () => {
   let element: JQuery;
   let $doSomething: ng.IDeferred<string[]>;
 
-  beforeEach(angular.mock.module(contextThree));
+  beforeEach(angular.mock.module(domainThree));
 
   beforeEach(inject(($compile: ng.ICompileService, $rootScope: ng.IRootScopeService,
                      ServiceThreeOne: ServiceThreeOne, $q: ng.IQService) => {

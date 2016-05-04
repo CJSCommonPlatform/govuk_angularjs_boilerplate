@@ -1,9 +1,9 @@
-import {contextOneRoutes} from '../context-1/routes';
-import {contextTwoRoutes} from '../context-2/routes';
-import {contextThreeRoutes} from '../context-3/routes';
+import {domainOneRoutes} from '../domain-1/routes';
+import {domainTwoRoutes} from '../domain-2/routes';
+import {domainThreeRoutes} from '../domain-3/routes';
 
 export const routes: angular.ui.IState[] = [
-  ...contextOneRoutes,
-  ...contextTwoRoutes,
-  ...contextThreeRoutes
+  ...domainOneRoutes,
+  ...domainTwoRoutes,
+  ...domainThreeRoutes
 ];

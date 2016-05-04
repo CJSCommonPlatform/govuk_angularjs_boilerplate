@@ -26,18 +26,18 @@ Run e2e tests using protractor.
 
 ## Application Structure
 
-An application is made up a set of modules, which can be recognised as either a "core" or "context" module:
+An application is made up a set of modules, which can be recognised as either a "core" or "domain" module:
 
 - A **core** module will be bundled as part of the main application. A core module should contain no
-  components that can be routed to, instead existing to support the application's contexts.
+  components that can be routed to, instead existing to support the application's domains.
 
-- A **context** module represents a business domain of the application, and should be modelled such that
+- A **domain** module represents a business domain of the application, and should be modelled such that
  it could, if required, be loaded on demand. In order to satisfy this requirement, _it must not depend
- on any other context_. Typically, a context will map to a top-level route in the application and may,
- itself, contain sub-contexts.
+ on any other domain_. Typically, a domain will map to a top-level route in the application and may,
+ itself, contain sub-domains.
 
 In the boilerplate app, the `common` and `config` modules are core modules, depended upon by one or
- more contexts.
+ more domains.
 
 ###Module Structure
 
@@ -56,7 +56,7 @@ A typical core module will contain:
   index.ts
 ```
 
-A typical context module will extend this structure with:
+A typical domain module will extend this structure with:
 
 ```
   /route-component-1
@@ -65,6 +65,6 @@ A typical context module will extend this structure with:
   ...
   routes.ts
 ```
-Any components, services, constants, directives and filters defined within a context are local to that context,
- and should not be required by another context (as per the design remit above). The context's routes, too, are
- defined within the context itself, and are then imported by the application's main routes configuration.
+Any components, services, constants, directives and filters defined within a domain are local to that domain,
+ and should not be required by another domain (as per the design remit above). The domain's routes, too, are
+ defined within the domain itself, and are then imported by the application's main routes configuration.

@@ -1,10 +1,10 @@
-import {contextTwo} from '../index';
+import {domainTwo} from '../index';
 
 describe('filter-2.1', () => {
 
   let filter: Function;
 
-  beforeEach(angular.mock.module(contextTwo));
+  beforeEach(angular.mock.module(domainTwo));
 
   beforeEach(inject((filterTwoOneFilter: Function) => filter = filterTwoOneFilter));
 

@@ -1,15 +1,15 @@
 import {common} from './common';
 import {config} from './config';
-import {contextOne} from './context-1';
-import {contextTwo} from './context-2';
+import {domainOne} from './domain-1';
+import {domainTwo} from './domain-2';
 
 require('./index.scss');
 
 const appModule = angular.module('ngGovExample', [
   common,
   config,
-  contextOne,
-  contextTwo,
+  domainOne,
+  domainTwo,
   'oc.lazyLoad',
   'ui.router'
 ]);

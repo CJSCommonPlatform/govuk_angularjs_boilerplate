@@ -1,11 +1,11 @@
-import {contextTwo} from '../index';
+import {domainTwo} from '../index';
 
 describe('page component 2.1', () => {
 
   let $scope: any;
   let element: JQuery;
 
-  beforeEach(angular.mock.module(contextTwo));
+  beforeEach(angular.mock.module(domainTwo));
 
   beforeEach(inject(($compile: ng.ICompileService, $rootScope: ng.IRootScopeService) => {
     $scope = $rootScope.$new();
