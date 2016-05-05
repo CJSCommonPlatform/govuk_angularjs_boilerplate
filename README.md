@@ -1,27 +1,37 @@
 ##AngularJS Boilerplate
 
 A self-documenting seed project for angular 1.5 and typescript, supported by webpack
- and containing examples of writing and testing angular 1.5 with typescript.
+ and containing examples of writing and testing angular 1.5 with typescript. Before running,
+ ensure that you have the typings module install globally by using:
+
+ ```
+ npm install typings -g
+ ```
 
 
 ####Scripts:
 
-`npm start`
+Run the app in development mode with hot reloading:
+```
+npm start
+```
+Builds the project in production mode, and then creates a server:
+```
+npm run build_prod
+npm run serve
+```
 
-Run the app in development mode with hot reloading.
+Run unit tests using karma:
+```
+npm test
+```
 
-`npm run build_prod` +
-`npm run serve`
+Run e2e tests using protractor:
 
-Builds the project in production mode, and then creates a server.
+```
+npm run protractor
+```
 
-`npm test`
-
-Run unit tests using karma.
-
-`npm run protractor`
-
-Run e2e tests using protractor.
 
 
 ## Application Structure

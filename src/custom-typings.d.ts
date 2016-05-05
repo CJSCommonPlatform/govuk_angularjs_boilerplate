@@ -14,3 +14,8 @@ declare namespace angular.ui {
     state: string
   }
 }
+
+// support ensure on require for webpack
+interface NodeRequire {
+  ensure: any
+}

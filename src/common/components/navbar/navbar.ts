@@ -5,7 +5,7 @@ import {Component} from '@govuk/angularjs-framework';
 })
 
 export class Navbar {
-   
+
   static $inject = ['$state'];
 
   constructor(private _$state: angular.ui.IStateService) {}
