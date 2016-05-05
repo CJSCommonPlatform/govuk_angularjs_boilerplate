@@ -7,6 +7,7 @@
     "prebuild_prod": "npm run clean",
     "build_prod": "webpack --config config/webpack.prod.js  --progress --profile --colors --display-error-details --display-cached --bail",
     "clean": "rimraf -- dist",
+    "postinstall": "typings install",
     "protractor": "protractor",
     "serve": "http-server dist --cors",
     "start": "webpack-dev-server --config config/webpack.dev.js --inline --progress --profile --colors --watch --display-error-details --display-cached",
