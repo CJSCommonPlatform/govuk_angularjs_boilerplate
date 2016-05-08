@@ -1,9 +1,11 @@
-import {domainOneRoutes} from '../domain-1/routes';
-import {domainTwoRoutes} from '../domain-2/routes';
-import {domainThreeRoutes} from '../domain-3/routes';
+import { routes } from '../routes';
 
-export const routes: angular.ui.IState[] = [
-  ...domainOneRoutes,
-  ...domainTwoRoutes,
-  ...domainThreeRoutes
-];
+const module = angular.module('govuk-angularjs-boilerplate.config.routes', ['ui.router'])
+
+  .config(($stateProvider: angular.ui.IStateProvider,
+           $urlRouterProvider: angular.ui.IUrlRouterProvider) => {
+    routes.forEach(config => $stateProvider.state(config.state, config));
+    $urlRouterProvider.otherwise('/domain-one');
+  });
+
+export const routeConfig: string = module.name;

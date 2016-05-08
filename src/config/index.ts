@@ -1,10 +1,9 @@
-import {routes} from './routes';
+import { routeConfig } from './routes';
+import { compileConfig } from './compile';
 
-const module = angular.module('ngGovExample.config', ['ui.router'])
-
-  .config(($stateProvider, $urlRouterProvider) => {
-    routes.forEach(config => $stateProvider.state(config.state, config));
-    $urlRouterProvider.otherwise('/domain-one');
-  });
+const module = angular.module('govuk-angularjs-framework.config', [
+  routeConfig,
+  compileConfig
+]);
 
 export const config: string = module.name;

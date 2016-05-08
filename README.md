@@ -1,13 +1,18 @@
 ##AngularJS Boilerplate
 
-A self-documenting seed project for angular 1.5 and typescript, supported by webpack
+A seed project for angular 1.5 and typescript, supported by webpack
  and containing examples of writing and testing angular 1.5 with typescript. Before running,
  ensure that you have the typings module install globally by using:
 
- ```
- npm install typings -g
- ```
+```
+npm install typings -g
+```
 
+Then run:
+
+```
+npm install
+```
 
 ####Scripts:
 
@@ -32,7 +37,8 @@ Run e2e tests using protractor:
 npm run protractor
 ```
 
-
+## Style Guide
+The project follows the conventions laid out by the official [Angular 2 Style Guide](https://angular.io/styleguide).
 
 ## Application Structure
 
@@ -44,9 +50,9 @@ An application is made up a set of modules, which can be recognised as either a 
 - A **domain** module represents a business domain of the application, and should be modelled such that
  it could, if required, be loaded on demand. In order to satisfy this requirement, _it must not depend
  on any other domain_. Typically, a domain will map to a top-level route in the application and may,
- itself, contain sub-domains.
+ itself, contain sub-domains. A domain module folder is prefixed with a `+`.
 
-In the boilerplate app, the `common` and `config` modules are core modules, depended upon by one or
+In the boilerplate app, the `shared` and `config` modules are core modules, depended upon by one or
  more domains.
 
 ###Module Structure
